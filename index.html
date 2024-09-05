@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Onboarding Checklist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Client Onboarding Checklist</h1>
+        <div id="checklist-container">
+            <h2>Checklists</h2>
+            <button id="add-checklist">Add New Checklist</button>
+            <div id="checklists"></div>
+        </div>
+    </div>
+
+    <template id="checklist-template">
+        <div class="checklist">
+            <h3 class="checklist-title" contenteditable="true">New Checklist</h3>
+            <div class="task-list"></div>
+            <button class="add-task">Add Task</button>
+        </div>
+    </template>
+
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox" class="task-status">
+            <span class="task-name" contenteditable="true">New Task</span>
+            <input type="date" class="task-deadline">
+            <select class="task-assignee">
+                <option value="">Assign to...</option>
+                <option value="John">John</option>
+                <option value="Jane">Jane</option>
+                <option value="Bob">Bob</option>
+            </select>
+            <button class="delete-task">Delete</button>
+        </div>
+    </template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/toastify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
